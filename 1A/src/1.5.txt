@@ -1,0 +1,15 @@
+(define (p) (p)) is syntatic sugar for (define p (lambda () p))
+i.e., a function that just calls itself, and infintely recurses
+if we were to lazily evaluate the operands (use normal-order
+evaluation), then the first operand of the if statment would
+be evaluated as true, the second operand would then be 
+evaluated to 0, and would be returned. In eager evaluation,
+however, the interpreter would get caught in the infinite
+loop of trying to evaluate p, and would never finish.
+Technically, from a black-box perspective, Ben can never
+be sure that he is dealing with an applicative-order
+evaluating interpreter, because it would appear the same
+as a normal-order evaluting interpreter that simply
+has not returned a value yethis test will only
+identify some interpreters as being normal-order
+and others as being indeterminant.

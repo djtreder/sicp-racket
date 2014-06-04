@@ -1,0 +1,3 @@
+When b is greater than zero, a + b is evaluated
+when b is less than zero, a - b is evaluated
+The end result of this is to calculate a + abs(b)
