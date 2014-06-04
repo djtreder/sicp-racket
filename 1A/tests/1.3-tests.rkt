@@ -34,25 +34,3 @@
       (test-case
 	"when there are three numbers"
 	(check-equal? (sum-of-larger-squares 2 3 4) 25 "it returns the answer")))))
-
-(module+
-  test
-  (run-tests
-    (test-suite
-      "sols2"
-      (test-case
-	"when all numbers are zero"
-	(let ([x 0] [y 0] [z 0])
-	  (check-equal? (sols2 x y z) 0 "it returns zero")))
-      (test-case
-	"when one number is one"
-	(check-equal? (sols2 1 0 0) 1 "it returns one")
-	(check-equal? (sols2 0 1 0) 1 "it returns one")
-	(check-equal? (sols2 0 0 1) 1 "it returns one"))
-      (test-case
-	"when two numbers are one"
-	(check-equal? (sols2 1 1 0) 2 "it returns two")
-	(check-equal? (sols2 0 1 1) 2 "it returns two"))
-      (test-case
-	"when all numbers are one"
-	(check-equal? (sols2 1 1 1) 2 "it returns two")))))
