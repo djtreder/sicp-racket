@@ -1,0 +1,1 @@
+(f f) will cause the function f to be called with the argument 2, which then attempts to call the function 2 with the argument 2, which is invalid because 2 is not a function
